@@ -22,7 +22,7 @@ namespace TransformationBasedQuery {
             jsonDataSource.Fill();
             // Create a Federation data source.
             FederationDataSource federationDataSource = new FederationDataSource();
-            Source jsonSource = new Source("json", jsonDataSource, "");
+            Source jsonSource = new Source("json", jsonDataSource);
             TransformationNode query = jsonSource
                 .Transform()
                 .TransformColumn("Products")

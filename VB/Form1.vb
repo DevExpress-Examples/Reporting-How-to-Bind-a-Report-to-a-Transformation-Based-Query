@@ -33,7 +33,7 @@ Namespace TransformationBasedQuery
 '			#Region "CreateFederationDataSource"
 			' Create a Federation data source.
 			Dim federationDataSource As New FederationDataSource()
-			Dim jsonSource As New Source("json", jsonDataSource, "")
+			Dim jsonSource As New Source("json", jsonDataSource)
 			Dim query As TransformationNode = jsonSource.Transform().TransformColumn("Products").Build("Transformation")
 			federationDataSource.Queries.Add(query)
 '			#End Region
