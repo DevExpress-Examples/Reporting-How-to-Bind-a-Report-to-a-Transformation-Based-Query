@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TransformationBasedQuery", "Reporting-How-to-Bind-a-Report-to-a-Transformation-Based-Query\TransformationBasedQuery\TransformationBasedQuery.vbproj", "{8FDC518C-75E3-4DD3-B834-3E9A309C0730}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TransformationBasedQuery", "TransformationBasedQuery.vbproj", "{8FDC518C-75E3-4DD3-B834-3E9A309C0730}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FD18C39F-1A91-424E-BA91-EE04BA42EDFF}
+		SolutionGuid = {8BF8E8DF-981D-4C92-8429-A0579384EA40}
 	EndGlobalSection
 EndGlobal
