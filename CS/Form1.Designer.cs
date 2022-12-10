@@ -37,6 +37,7 @@
             this.documentViewer1.Name = "documentViewer1";
             this.documentViewer1.Size = new System.Drawing.Size(1160, 481);
             this.documentViewer1.TabIndex = 0;
+            this.documentViewer1.Load += new System.EventHandler(this.documentViewer1_Load);
             // 
             // Form1
             // 

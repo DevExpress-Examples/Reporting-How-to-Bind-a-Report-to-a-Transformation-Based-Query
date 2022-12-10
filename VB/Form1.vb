@@ -33,14 +33,9 @@ Namespace TransformationBasedQuery
 			#Region "CreateFederationDataSource"
 			' Create a Federation data source.
 			Dim federationDataSource As New FederationDataSource()
-			Dim jsonSource As New Source("json", jsonDataSource, "")
-			Dim sourceNode As New SourceNode(jsonSource)
-			Dim transformationNode As New TransformationNode(sourceNode) With {
-				.Alias = "Transformation", .Rules = {
-					New TransformationRule With {.ColumnName = "Products", .Unfold = True, .Flatten = True}
-				}
-			}
-			federationDataSource.Queries.Add(transformationNode)
+			Dim jsonSource As New Source("json", jsonDataSource)
+			Dim query As TransformationNode = jsonSource.Transform().TransformColumn("Products").Build("Transformation")
+			federationDataSource.Queries.Add(query)
 			#End Region
 			#Region "CreateReport"
 			' Create a report and bind it to the Federation data source.
@@ -52,6 +47,10 @@ Namespace TransformationBasedQuery
 			' Display the report in the Document Viewer.
 			documentViewer1.DocumentSource = report
 			#End Region
+		End Sub
+
+		Private Sub documentViewer1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles documentViewer1.Load
+
 		End Sub
 	End Class
 End Namespace

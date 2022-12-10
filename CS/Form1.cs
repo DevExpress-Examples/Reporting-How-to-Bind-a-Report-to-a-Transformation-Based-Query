@@ -22,19 +22,22 @@ namespace TransformationBasedQuery {
             jsonDataSource.Fill();
             // Create a Federation data source.
             FederationDataSource federationDataSource = new FederationDataSource();
-            Source jsonSource = new Source("json", jsonDataSource, "");
-            SourceNode sourceNode = new SourceNode(jsonSource);
-            TransformationNode transformationNode = new TransformationNode(sourceNode) {
-                Alias = "Transformation",
-                Rules = { new TransformationRule { ColumnName = "Products", Unfold = true, Flatten = true } }
-            };
-            federationDataSource.Queries.Add(transformationNode);
+            Source jsonSource = new Source("json", jsonDataSource);
+            TransformationNode query = jsonSource
+                .Transform()
+                .TransformColumn("Products")
+                .Build("Transformation");
+            federationDataSource.Queries.Add(query);
             // Create a report and bind it to the Federation data source.
             XtraReport1 report = new XtraReport1();
             report.DataSource = federationDataSource;
             report.DataMember = "Transformation";
             // Display the report in the Document Viewer.
             documentViewer1.DocumentSource = report;
+        }
+
+        private void documentViewer1_Load(object sender, EventArgs e) {
+
         }
     }
 }

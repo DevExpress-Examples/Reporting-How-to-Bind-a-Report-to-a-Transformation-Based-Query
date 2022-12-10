@@ -34,6 +34,8 @@
 			Me.documentViewer1.Name = "documentViewer1"
 			Me.documentViewer1.Size = New System.Drawing.Size(1160, 481)
 			Me.documentViewer1.TabIndex = 0
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.documentViewer1.Load += new System.EventHandler(this.documentViewer1_Load);
 			' 
 			' Form1
 			' 
@@ -49,7 +51,7 @@
 
 		#End Region
 
-		Private documentViewer1 As DevExpress.XtraPrinting.Preview.DocumentViewer
+		Private WithEvents documentViewer1 As DevExpress.XtraPrinting.Preview.DocumentViewer
 	End Class
 End Namespace
 
