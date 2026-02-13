@@ -16,7 +16,7 @@ This example demonstrates how to bind a [report](https://docs.devexpress.com/Xtr
 
 * [Bind a Report to a Transformation-Based Data Source](https://docs.devexpress.com/XtraReports/402101)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=Reporting-How-to-Bind-a-Report-to-a-Transformation-Based-Query&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=Reporting-How-to-Bind-a-Report-to-a-Transformation-Based-Query&~~~was_helpful=no)
 
